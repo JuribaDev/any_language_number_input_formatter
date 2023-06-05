@@ -1,39 +1,27 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Any Language Number Input Formatter Package
+This package is designed to allow Flutter applications to utilize a custom input formatter for transforming different numeral systems into Arabic numerals. Specifically, it offers an `AnyLanguageNumberInputFormatter` that takes in numerals from various languages and outputs their Arabic numeral equivalents.
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+## 📁 Package Structure
+The main components of this package include:
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+`AnyLanguageNumberInputFormatter`: This custom `TextInputFormatter` implementation handles text input, formatting it by converting numerals from various languages into their Arabic numeral equivalents.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+`MyApp`: The root widget of the example application. It sets up a MaterialApp widget.
 
-## Features
+`MyHomePage`: The home page of the example application, demonstrating the usage of TextField and TextFormField with the AnyLanguageNumberInputFormatter.
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+## ⚙️ How It Works
+The `AnyLanguageNumberInputFormatter` class overrides the `formatEditUpdate` method. This method is called whenever a user alters the text in a text field. The formatter checks if the new value contains numerals in other languages and, if so, replaces them with their Arabic numeral equivalents.
 
-## Getting started
+The `MyHomePage` class contains a `_disable` flag. If this flag is true, the text fields don't use any input formatter. If it's false, they use the `AnyLanguageNumberInputFormatter`. Users can toggle the `_disable` flag by pressing a button.
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+## 🚀 Getting Started
+To use this package, please follow these steps:
 
-## Usage
+   1. Add this package to your project's `pubspec.yaml` file.
+   2. Run `flutter pub get` to fetch the package.
+   3. Import the package in your Dart file with `import 'package:any_language_number_input_formatter/any_language_number_input_formatter.dart';`.
+      Ensure that Flutter and Dart are installed and properly configured on your system.
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
-```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+✅ Testing
+Unit tests for `AnyLanguageNumberInputFormatter` can be found in the test directory of the package. To execute these tests, use the `flutter test` command.
