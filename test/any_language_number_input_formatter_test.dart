@@ -19,7 +19,7 @@ void main() {
     // Define the 'old' value as an empty TextEditingValue
     TextEditingValue oldValue = TextEditingValue.empty;
     // Define the 'new' value as a TextEditingValue with the text set to the Indian numeral '٥'
-    TextEditingValue newValue = const TextEditingValue(text: '٥');
+    TextEditingValue newValue = const TextEditingValue(text: '٠٥٣٣٠٩٣١٣٩');
 
     // Act
     // Pass the old and new values to the formatter's formatEditUpdate method
@@ -28,7 +28,7 @@ void main() {
 
     // Assert
     // Check that the formatter correctly converted the Indian numeral '٥' to the Arabic numeral '5'
-    expect(formattedValue.text, '5');
+    expect(formattedValue.text, '0533093139');
   });
 
   // This function defines a test case
