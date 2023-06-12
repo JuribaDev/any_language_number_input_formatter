@@ -1,7 +1,7 @@
 class LanguageMapping {
   // A Map that maps the language to its corresponding list of numerals
   final Map<String, List<String>> languages = {
-    "Arabic": ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'],
+    "Hindi": ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'],
     "Bengali": ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'],
     "Chinese/Japanese": ['〇', '一', '二', '三', '四', '五', '六', '七', '八', '九'],
     "Gujarati": ['૦', '૧', '૨', '૩', '૪', '૫', '૬', '૭', '૮', '૯'],
@@ -17,20 +17,13 @@ class LanguageMapping {
     "Urdu": ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹']
   };
 
-  String formatValue(String newValue, bool isCopyPaste) {
+  String formatValue(String newValue) {
     String formattedValue = newValue;
     languages.forEach((language, languagesNumbers) {
       // Iterating through all the numerals of a specific language
-      languagesNumbers.forEach((String num) {
-        if (!isCopyPaste) {
-          // If the input text contains a numeral of a specific language
-          if (newValue.contains(num)) {
-            // The specific language numeral in the input text is replaced with its equivalent numeral in English
-            formattedValue = formattedValue.replaceFirst(num, languagesNumbers.indexOf(num).toString());
-          }
-        }
+      for (var num in languagesNumbers) {
         formattedValue = formattedValue.replaceAll(num, languagesNumbers.indexOf(num).toString());
-      });
+      }
     });
     return formattedValue;
   }
