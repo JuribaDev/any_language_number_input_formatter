@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                const Text("Number Keyboard - 2"),
+                const Text("Number Keyboard"),
                 TextField(
                   style: const TextStyle(fontSize: 30),
                   keyboardType: TextInputType.number, // The keyboard type is number
