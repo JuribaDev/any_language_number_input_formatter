@@ -14,7 +14,7 @@ void main() {
   });
 
   // This function defines a test case
-  test('should convert Indian numerals to Arabic numerals', () {
+  test('should convert Indian numerals to Arabic numerals by copy and paste', () {
     // Arrange
     // Define the 'old' value as an empty TextEditingValue
     TextEditingValue oldValue = TextEditingValue.empty;
