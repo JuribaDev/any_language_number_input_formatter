@@ -57,5 +57,5 @@ or `TextFormField` widgets like this:
 ```
 
 ✅ Testing
-Unit tests for `AnyLanguageNumberInputFormatter` can be found in the test directory of the package.
+Unit tests for `AnyLanguageNumberInputFormatter` and `LnaguageMapping` can be found in the test directory of the package.
 To execute these tests, use the `flutter test` command.
