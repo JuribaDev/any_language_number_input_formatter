@@ -48,16 +48,12 @@ You can use the `AnyLanguageNumberInputFormatter` as an input formatter for `Tex
 or `TextFormField` widgets like this:
 
 ```dart
-TextField
-(
-inputFormatters: [AnyLanguageNumberInputFormatter()],
-),
-TextFormField(
-inputFormatters: [
-AnyLanguageNumberInputFormatter(),
-],
-)
-,
+   TextField(
+      inputFormatters: [AnyLanguageNumberInputFormatter()],
+      ),
+   TextFormField(
+      inputFormatters: [AnyLanguageNumberInputFormatter()],
+      )
 ```
 
 ✅ Testing
